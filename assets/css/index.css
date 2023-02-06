@@ -1,0 +1,271 @@
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #333333;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #022330;
+    border-radius: 99px;
+    border: 3px solid #022330;
+}
+
+:root {
+    --black: rgb(36, 36, 36);
+    --background-dark: #2d3548;
+    --text-light: rgba(255, 255, 255, 0.6);
+    --text-lighter: rgba(255, 255, 255, 0.9);
+}
+
+@font-face {
+    font-family: "vanilla";
+    src: url("../fonts/Vanilla\ Twilight\ Script.eot");
+    src: url("../fonts/Vanilla\ Twilight\ Script.eot?iefix") format("embedded-opentype"),
+        url("../fonts/Vanilla\ Twilight\ Script.woff") format("woff"),
+        url("../fonts/VanillaTwilight\ Script.ttf") format("truetype"),
+        url("../fonts/Vanilla\ Twilight\ Script.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"),
+        url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot") format("embedded-opentype"),
+        url("../fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("../fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    overflow-x: hidden;
+    background: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+.showcase {
+    background-color: rgb(184, 184, 184);
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.75; */
+    overflow: hidden;
+    background: black url("/assets/img/1.png ") loop muted center center/cover;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.video-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.headerContent {
+    z-index: 100;
+    display: grid;
+    place-items: center;
+}
+
+#adoptionLogo {
+    width: 20%;
+    transition: all .5s;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+#meditionalLogo:hover {
+    scale: 1.1;
+}
+
+#textHeader {
+    font-family: 'vanilla';
+    width: fit-content;
+    color: white;
+    font-size: 8rem;
+    transition: all 1s;
+}
+
+#textHeader:hover {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    scale: 1.2;
+}
+
+#downArrow {
+    font-family: 'icons';
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    margin-top: 3rem;
+    transition: all .5s;
+}
+
+#downArrow:hover {
+    text-shadow: 0px 0px 20px #fff;
+}
+
+/* navbar */
+#navbar {
+    box-shadow: 0px 0px 10px 1px var(--gray3);
+}
+
+#navbar div {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(yellow, red);
+}
+
+#navbar div a {
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+}
+
+#navbar div a:hover {
+    color: var(--text-light);
+    transition: color .3s ease, color .3s ease;
+}
+
+#navbar div #adopcion {
+    font-family: 'vanilla';
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    transition: all .3s;
+}
+
+#navbar div #adopcion:hover {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    scale: 1.1;
+}
+
+#navbar div img {
+    margin-right: .3rem;
+    height: 3rem;
+}
+
+#navbar ul {
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    width: fit-content;
+    list-style-type: none;
+
+}
+
+#navbar ul li {
+    float: left;
+    width: 9em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+#navbar ul li:hover {
+    scale: 1.2;
+}
+
+#navbar ul a {
+    font-size: 1.5rem;
+    align-items: center;
+    padding: 0;
+}
+
+#navbar ul a:hover {
+
+}
+
+.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* information */
+.information {
+    display: flex;
+    justify-content: space-around;
+    overflow-y: hidden;
+    height: 92vh;
+}
+
+.information h1 {
+    /* background: green; */
+    min-width: 200px;
+    width: 20%;
+    margin-top: 35vh;
+    /* height: 100%; */
+    /* justify-content: center; */
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.information .allTech {
+    width: 50%;
+    height: 100%;
+    margin-top: 17vh;
+}
+
+.information .allTech .techIndividual {
+    display: flex;
+    height: 150px;
+}
+
+.information .allTech .techIndividual img {
+    width: 200px;
+    height: 60px;
+    margin: 20px;
+}
+
+.information .allTech .techIndividual .techText p {
+    color: #ccc;
+    font-weight: lighter;
+}
