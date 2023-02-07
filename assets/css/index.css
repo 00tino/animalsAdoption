@@ -52,7 +52,7 @@
 
 body {
     overflow-x: hidden;
-    background: #333333;
+    background: #A7727D;
 }
 
 a {
@@ -150,14 +150,14 @@ a {
 
 /* navbar */
 #navbar {
-    box-shadow: 0px 0px 10px 1px var(--gray3);
+    box-shadow: 0px 0px 10px 1px #966670);
 }
 
 #navbar div {
     height: 8vh;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(yellow, red);
+    background: linear-gradient(#b9ac9b, #A7727D);
 }
 
 #navbar div a {
@@ -165,7 +165,7 @@ a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--black);
+    color: #F9F5E7;
 }
 
 #navbar div a:hover {
@@ -192,7 +192,7 @@ a {
 }
 
 #navbar ul {
-    font-family: "Helvetica Neue",Helvetica,Arial;
+    font-family: "Helvetica Neue", Helvetica, Arial;
     width: fit-content;
     list-style-type: none;
 
@@ -218,9 +218,7 @@ a {
     padding: 0;
 }
 
-#navbar ul a:hover {
-
-}
+#navbar ul a:hover {}
 
 .navbar-fixed {
     position: fixed;
@@ -231,6 +229,8 @@ a {
 
 /* information */
 .information {
+    /* background: lightcoral; */
+    color: #ddccb9;
     display: flex;
     justify-content: space-around;
     overflow-y: hidden;
@@ -242,8 +242,6 @@ a {
     min-width: 200px;
     width: 20%;
     margin-top: 35vh;
-    /* height: 100%; */
-    /* justify-content: center; */
     font-size: 50px;
     font-weight: 900;
 }
@@ -262,10 +260,231 @@ a {
 .information .allTech .techIndividual img {
     width: 200px;
     height: 60px;
-    margin: 20px;
+    margin: 0 40px 0 0;
 }
 
 .information .allTech .techIndividual .techText p {
-    color: #ccc;
+    color: #F9F5E7;
     font-weight: lighter;
+}
+
+.space {
+    height: 104.5vh;
+    background: blue;
+}
+
+.space div {
+    background: #333333;
+    height: 12.5vh;
+}
+
+/* contact us */
+
+.contactUs,
+.contactUs button,
+.contactUs input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+}
+
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+    margin-right: auto;
+}
+
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+}
+
+.screen-header-button.close {
+    background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+    background: #e8e925;
+}
+
+.screen-header-button.minimize {
+    background: #74c54f;
+}
+
+.screen-header-right {
+    display: flex;
+}
+
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+}
+
+.screen-body {
+    display: flex;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #A7727D;
+    font-size: 26px;
+}
+
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #EDDBC7;
+}
+
+.app-title .descriptionForm {
+    font-size: 15px;
+    margin: 1rem 2rem 0 0;
+    color: #EDDBC7;
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+}
+
+.app-form-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.app-form-group.message {
+    margin-top: 40px;
+}
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color:#F9F5E7;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+    color: #666;
+}
+
+.app-form-control:focus {
+    border-bottom-color: #F9F5E7;
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: #A7727D;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.app-form-button:hover {
+    color: #785259;
+}
+
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title span {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+
+    .screen-body-item {
+        padding: 0;
+    }
 }
