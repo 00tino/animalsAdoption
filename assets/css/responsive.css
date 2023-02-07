@@ -1,0 +1,88 @@
+@media(max-width: 1372px) {
+    .heroCard ul .booking-card:last-child {
+        display: none;
+    }
+}
+
+@media(max-width: 1031px) {
+    #navbar ul li {
+        width: 7rem;
+    }
+
+    #navbar ul li a{
+        font-size: 20px;
+    }
+
+    .heroCard ul .booking-card:nth-child(3) {
+        display: none;
+    }
+}
+
+@media(max-width: 740px) {
+    #navbar ul li {
+        width: 5rem;
+    }
+
+    #navbar ul li a{
+        font-size: 15px;
+    }
+
+    .btnForm {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 700px) {
+    #textHeader {
+        font-size: 7rem;
+    }
+
+    #textHeader:hover {
+        scale: 1.1;
+    }
+}
+
+
+@media(max-width: 691px) {
+    .heroCard ul .booking-card:nth-child(2) {
+        display: none;
+    }
+}
+
+
+@media(max-width: 648px) {
+    .btnForm {
+        margin: 3.3rem 2rem 0 0;
+    }
+}
+
+@media(max-width: 613px) {
+    .aboutUs h1 {
+        font-size: 35px;
+        margin-top: 41vh;
+    }
+
+    .techDescription {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 560px) {
+    #textHeader {
+        font-size: 6rem;
+    }
+
+    #navbar ul li {
+        width: 4rem;
+    }
+
+    #navbar ul li a{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 520px) {
+    .btnForm {
+        margin: 3.3rem 0 0 0;
+    }
+}
