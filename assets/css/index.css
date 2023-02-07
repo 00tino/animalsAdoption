@@ -228,7 +228,7 @@ a {
 }
 
 /* information */
-.information {
+.aboutUs {
     /* background: lightcoral; */
     color: #ddccb9;
     display: flex;
@@ -237,7 +237,7 @@ a {
     height: 92vh;
 }
 
-.information h1 {
+.aboutUs h1 {
     /* background: green; */
     min-width: 200px;
     width: 20%;
@@ -246,24 +246,24 @@ a {
     font-weight: 900;
 }
 
-.information .allTech {
+.aboutUs .allTech {
     width: 50%;
     height: 100%;
     margin-top: 17vh;
 }
 
-.information .allTech .techIndividual {
+.aboutUs .allTech .techIndividual {
     display: flex;
     height: 150px;
 }
 
-.information .allTech .techIndividual img {
+.aboutUs .allTech .techIndividual img {
     width: 200px;
     height: 60px;
     margin: 0 40px 0 0;
 }
 
-.information .allTech .techIndividual .techText p {
+.aboutUs .allTech .techIndividual .techText p {
     color: #F9F5E7;
     font-weight: lighter;
 }
@@ -301,6 +301,7 @@ a {
 
 .screen {
     position: relative;
+    overflow: hidden;
     background: #3e3e3e;
     border-radius: 15px;
 }
