@@ -32,6 +32,18 @@
     }
 }
 
+@media(max-width: 726px) {
+    .aboutUs h1 {
+        font-size: 35px;
+        margin-top: 41vh;
+    }
+
+    .techDescription {
+        font-size: 12px;
+    }
+}
+
+
 @media(max-width: 700px) {
     #textHeader {
         font-size: 7rem;
@@ -56,17 +68,6 @@
     }
 }
 
-@media(max-width: 613px) {
-    .aboutUs h1 {
-        font-size: 35px;
-        margin-top: 41vh;
-    }
-
-    .techDescription {
-        font-size: 12px;
-    }
-}
-
 @media(max-width: 560px) {
     #textHeader {
         font-size: 6rem;
@@ -81,8 +82,35 @@
     }
 }
 
+@media(max-width: 530px) {
+    #navbar div #adopcion {
+        font-size: 2rem;
+    }
+}
+
 @media(max-width: 520px) {
     .btnForm {
         margin: 3.3rem 0 0 0;
+    }
+}
+
+@media(max-width: 475px) {
+    #navbar div #adopcion {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 445px) {
+    #navbar div img {
+        margin-right: 0.3rem;
+        height: 2.5rem;
+    }
+
+    #navbar ul li {
+        width: 3.5rem;
+    }
+
+    #navbar ul li a{
+        font-size: 10px;
     }
 }
