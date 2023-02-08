@@ -16,18 +16,19 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <a href="../../index.html"><img class="navbar-logo" src="../../assets/main/img/logo.png" /></a>
-        <span id="adopcion">Adopcion</span>
+        <a href="../../index.html"><span id="adopcion">Adopcion</span></a>
+        <button class="navbar-burger" onclick="toggleMenu()"></button>
     </nav>
-    <button class="navbar-burger" onclick="toggleMenu()"></button>
     <nav class="menu">
-        <a href="../../index.html" style="animation-delay: 0.1s">Home</a>
-        <a href="#" style="animation-delay: 0.2s">About</a>
-        <a href="#" style="animation-delay: 0.3s">Services</a>
-        <a href="#" style="animation-delay: 0.4s">Products</a>
-        <a href="#" style="animation-delay: 0.5s">Contact</a>
+        <a href="../../index.html" style="animation-delay: 0.1s">Inicio</a>
+        <a href="assets/adoption/adoption.html" style="animation-delay: 0.2s">Adoptar</a>
+        <a href="../../index.html#aboutUs" style="animation-delay: 0.3s">Informacion</a>
+        <a href="../../index.html#contactUs" style="animation-delay: 0.4s">Transito</a>
+        <a href="#" style="animation-delay: 0.5s">Donaciones</a>
     </nav>
+
     <header>Products</header>
     <section>
         <aside class="filters">

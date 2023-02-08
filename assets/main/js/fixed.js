@@ -16,7 +16,7 @@
         updatePos();
 
         if (windowPos >= breakpoint && !isFixed) {
-            navbar.classList.remove('open');
+            // navbar.classList.remove('open');
 
             navbar.classList.add('navbar-fixed');
             main.style.cssText = "margin-top: " + navbarHeight + 'px;';
@@ -52,3 +52,9 @@ var bubblyButtons = document.getElementsByClassName("bubbly-button");
 for (var i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
 }
+
+// hamburger navbar
+
+const toggleMenu = () => {
+    document.body.classList.toggle("open");
+};
