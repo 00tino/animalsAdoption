@@ -68,9 +68,9 @@ header {
     width: 100%;
     color: #f9f9f9;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
-    margin: 0 0 10px;
+    margin: 20px 0 0px 0;
 }
 
 .filters .filt {

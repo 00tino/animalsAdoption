@@ -1,80 +1,45 @@
+* {
+    box-sizing: border-box;
+}
 
-.input_wrapper {
-    width: 40px;
-    height: 20px;
-    position: relative;
+/* https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png 
+  */
+
+.check-box-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.custom-checkbox {
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.input_wrapper input[type="checkbox"] {
-    width: 40px;
+.custom-checkbox:first-child {
+    margin: 0 100px 0 0;
+}
+
+.custom-checkbox .label {
+    font-size: 1.6em;
+}
+
+.custom-checkbox .checkmark {
+    width: 20px;
     height: 20px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #315e7f;
-    border-radius: 2px;
-    position: relative;
-    outline: 0;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+    border: 2px solid #222;
+    display: inline-block;
+    border-radius: 3px;
+    background: #222 url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
+    transition: background-size 0.2s ease;
 }
 
-.input_wrapper input[type="checkbox"]:after {
-    position: absolute;
-    content: "";
-    top: 1.5px;
-    left: 1.5px;
-    width: 17px;
-    height: 17px;
-    background: #dfeaec;
-    z-index: 2;
-    border-radius: 2px;
-    -webkit-transition: all .35s;
-    transition: all .35s;
+.custom-checkbox input:checked+.checkmark {
+    background-size: 60%;
+    transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
 }
 
-.input_wrapper svg {
-    position: absolute;
-    top: 50%;
-    -webkit-transform-origin: 0% 16%;
-    transform-origin: 0% 16%;
-    fill: #fff;
-    -webkit-transition: all .35s;
-    transition: all .35s;
-    z-index: 1;
-}
-
-.input_wrapper .is_checked {
-    width: 9;
-    left: 17%;
-    -webkit-transform: translateX(95%) translateY(-15%) scale(0);
-    transform: translateX(95%) translateY(-15%) scale(0);
-}
-
-.input_wrapper .is_unchecked {
-    width: 7.5px;
-    right: 13%;
-    -webkit-transform: translateX(0) translateY(-30%) scale(1);
-    transform: translateX(0) translateY(-30%) scale(1);
-}
-
-/* Checked State */
-.input_wrapper input[type="checkbox"]:checked {
-    background: #23da87;
-}
-
-.input_wrapper input[type="checkbox"]:checked:after {
-    left: calc(100% - 18.5px);
-}
-
-.input_wrapper input[type="checkbox"]:checked+.is_checked {
-    -webkit-transform: translateX(0) translateY(-30%) scale(.4);
-    transform: translateX(0) translateY(-30%) scale(.4);
-}
-
-.input_wrapper input[type="checkbox"]:checked~.is_unchecked {
-    -webkit-transform: translateX(-190%) translateY(-30%) scale(0);
-    transform: translateX(-190%) translateY(-30%) scale(0);
+.custom-checkbox input {
+    display: none;
 }
