@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding-top: 56px;
     font-family: "Euclid Circular A";
-    background: #3f2d96;
+    background: #A7727D;
     color: #f9f9f9;
 }
 
@@ -22,7 +22,7 @@ nav {
     width: 100%;
     height: 56px;
     color: #f9f9f9;
-    background: #6245e7;
+    background: #EDDBC7;
 }
 
 nav span {
@@ -37,7 +37,7 @@ nav div {
 }
 
 section {
-    background: #2b2a31;
+    background: #2d3548;
     padding: 20px;
 }
 
@@ -47,7 +47,7 @@ header {
     height: 120px;
     margin: 0;
     padding: 0 20px;
-    background: #3f2d96;
+    background: #EDDBC7;
     font-weight: 400;
     color: #f9f9f9;
 }
@@ -65,7 +65,7 @@ header {
 
 .filters h2 {
     width: 100%;
-    color: #7d7a7a;
+    color: #f9f9f9;
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
@@ -75,6 +75,7 @@ header {
 .filters .filt {
     width: fit-content;
     display: grid;
+    color: #EDDBC7;
     grid-template-columns: 1fr 3fr 1fr;
 }
 
