@@ -5,8 +5,9 @@
 body {
     margin: 0;
     padding-top: 56px;
+    overflow-x: hidden;
     font-family: "Euclid Circular A";
-    background: #A7727D;
+    background: #2d3548;
     color: #f9f9f9;
 }
 
@@ -57,7 +58,7 @@ header {
     place-items: center;
     z-index: 1;
     height: 10rem;
-    width: 35rem;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     /* display: inline-block; */
@@ -75,6 +76,7 @@ header {
 .filters .filt {
     width: fit-content;
     display: grid;
+    height: fit-content;
     color: #EDDBC7;
     grid-template-columns: 1fr 3fr 1fr;
 }
