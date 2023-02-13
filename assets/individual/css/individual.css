@@ -9,7 +9,6 @@
 
 /* Remove default margin */
 
-body,
 h1,
 h2,
 h3,
@@ -20,6 +19,10 @@ blockquote,
 dl,
 dd {
     margin: 0;
+}
+
+main {
+    margin-top: 8vh;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -38,6 +41,7 @@ html:focus-within {
 /* Set core body defaults */
 
 body {
+    margin: 16vh 0 0 0;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -97,14 +101,6 @@ select {
     /* (with 75% opacity for lightbox background) */
 }
 
-body {
-    overflow-x: hidden;
-    position: relative;
-    /* background: #A7727D; */
-    background: #d7d7d7;
-    font-family: "Kumbh Sans", sans-serif;
-}
-
 ul {
     list-style-type: none;
 }
@@ -143,6 +139,7 @@ button {
 }
 
 .navbar {
+    position:fixed;
     z-index: 5;
     top: 0;
     left: 0;
@@ -636,6 +633,9 @@ main {
 
 .pdt-images-ctn img {
     opacity: 1;
+    height: 140px;
+    width: 100px;
+    object-fit: cover;
     border-radius: 10px;
     transition: opacity 300ms;
 }
@@ -689,7 +689,10 @@ main {
 /* ********* Product Information section ******** */
 
 .pdt-content-ctn {
-    padding: 1.75rem;
+    position: fixed;
+    bottom: 350px;
+    right: 40px;
+    padding: 0 1.75rem 1.75rem 1.75rem;
     font-family: inherit;
     /* width: 90%;
     margin: 2rem auto; */
@@ -705,58 +708,18 @@ main {
 }
 
 .pdt-title {
-    font-size: 2rem;
+    color: var(--Orange) !important;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-weight: 700;
+    font-size: 2.5em;
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: var(--Very-dark-blue);
 }
 
 .pdt-desc {
     line-height: 1.6;
     color: var(--Dark-grayish-blue);
-}
-
-.pricing-ctn {
-    margin: 1.75rem 0 1.25rem;
-}
-
-.pricing-ctn,
-.pricing-ctn div:first-child,
-.pricing-ctn span.discount,
-.pdt-quantity-ctn,
-.pdt-quantity-ctn span.minus-icon,
-.pdt-quantity-ctn span.plus-icon,
-.cart-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.pricing-ctn span.final-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--Very-dark-blue);
-}
-
-.pricing-ctn span.discount {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    font-weight: bold;
-    color: var(--Orange);
-    padding: 0rem 0.25rem;
-    background: var(--Pale-orange);
-}
-
-.pricing-ctn span.actual-price {
-    color: var(--Grayish-blue);
-    font-weight: normal;
-    text-decoration: line-through;
-}
-
-.cart-section {
-    flex-direction: column;
 }
 
 @media screen and (min-width: 975px) {
@@ -782,32 +745,9 @@ main {
     }
 }
 
-.pdt-quantity-ctn {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    background: var(--Light-grayish-blue);
-}
-
-.pdt-quantity-ctn span.minus-icon,
-.pdt-quantity-ctn span.plus-icon {
-    opacity: 1;
-    transition: opacity 300ms;
-}
-
-.pdt-quantity-ctn span.minus-icon:hover,
-.pdt-quantity-ctn span.plus-icon:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.pdt-quantity-ctn span.pdt-quantity {
-    font-weight: bold;
-}
-
 .addToCart-btn-ctn {
     width: 100%;
+    margin-top: 40px;
 }
 
 #addToCart-btn {
@@ -870,7 +810,7 @@ main {
     align-self: flex-end;
 }
 
-.pdt-showcase-model__close-btn-ctn svg {
+.pdt-showcase-model__close-btn-ctn i {
     transform: scale(1.2);
 }
 
@@ -881,6 +821,8 @@ main {
 
 .pdt-img__modal {
     border-radius: 15px;
+    height: 450px;
+    object-fit: cover;
 }
 
 .pdt-images-ctn__modal {
