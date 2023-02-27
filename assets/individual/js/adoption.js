@@ -58,9 +58,6 @@ const toggleMenu = () => {
     document.body.classList.toggle("open");
 };
 
-
-// main page 
-
 // Function for showing the Product Slideshow at mobile size
 (function productSlideshow() {
     const prevBtn = document.querySelectorAll(".prev");
@@ -164,111 +161,6 @@ const toggleMenu = () => {
     });
 })();
 
-// Function to show and remove the Product showcase Modal
-function closePdtSlideshowModal() {
-    const mainPdtCtn = document.querySelector(".main-pdt-ctn");
-    const closeBtn = document.querySelector(".pdt-showcase-model__close-btn-ctn");
-    const modal = document.querySelector(".pdt-showcase-modal__desktop");
-    const overlay = document.querySelector(".overlay-nav");
-
-    mainPdtCtn.addEventListener("click", () => {
-        modal.classList.add("show-pdt-slideshow-modal");
-        overlay.classList.add("show-overlay");
-    });
-
-    closeBtn.addEventListener("click", (event) => {
-        modal.classList.remove("show-pdt-slideshow-modal");
-        overlay.classList.remove("show-overlay");
-    });
-}
-closePdtSlideshowModal();
-
-// Function to add the items to the cart and show them in the cart.
-(function addProductToCart() {
-    const minusBtn = document.querySelector(".minus-icon");
-    const plusBtn = document.querySelector(".plus-icon");
-    const pdtQuantity = document.querySelector(".pdt-quantity");
-    const cartNotify = document.querySelector(".cart-notify");
-
-    const addToCartBtn = document.querySelector("#addToCart-btn");
-    const cartContentCtn = document.querySelector(".cart-content-ctn");
-
-    let pdtCount = 0;
-
-    function showCount() {
-        pdtQuantity.textContent = pdtCount;
-    }
-
-    minusBtn.addEventListener("click", () => {
-        if (pdtCount > 0) {
-            pdtCount--;
-            showCount();
-        }
-    });
-    plusBtn.addEventListener("click", () => {
-        pdtCount++;
-        showCount();
-    });
-
-    function showCartData() {
-        if (pdtCount > 0) {
-            cartNotify.textContent = pdtCount;
-            cartNotify.classList.add("show-cart-notification");
-
-            const totalPrice = (((250 * 50) / 100) * pdtCount).toFixed(2);
-
-            cartContentCtn.innerHTML = `
-          <div class="pdt-info-ctn">
-                          <div class="pdt-preview-ctn">
-                              <img src="https://raw.githubusercontent.com/Rohitgour03/JavaScript-projects/main/E-Commerce%20product%20page/images/image-product-1-thumbnail.jpg" alt="product thumbnail">
-                          </div>
-                          <div class="cart-modal__pdt-qnty-ctn">
-                              <p>Autumn Limited Edition...</p>
-                              <p class="cart-modal__pdt-qnty">
-                                  $125.00 x
-                                  <span class="pdt-qnty">
-                                  ${pdtCount}
-                                  </span>
-                                  <span class="total-price">
-                                  $${totalPrice}
-                                  </span>
-                              </p>
-                          </div>
-                          <div class="cart-modal__delete-icon-ctn">
-                              <img class="cart-modal__delete-icon" src="https://raw.githubusercontent.com/Rohitgour03/JavaScript-projects/main/E-Commerce%20product%20page/images/icon-delete.svg" alt="">
-                          </div>
-                      </div>
-                      <div class="checkout-btn-ctn">
-                          <button class="checkout-btn" type="checkout">
-                              Checkout
-                          </button>
-                      </div>
-              `;
-            cartContentCtn.style.alignItems = "stretch";
-
-            const emptyCart = document.querySelector(".cart-modal__delete-icon");
-            emptyCart.addEventListener("click", () => {
-                pdtCount = 0;
-                showCartData(0);
-                pdtQuantity.textContent = pdtCount;
-            });
-        } else {
-            cartNotify.classList.remove("show-cart-notification");
-
-            cartContentCtn.innerHTML = `
-          <p class="empty-cart-text">
-          Your Cart is empty.
-          </p>
-          `;
-            cartContentCtn.style.alignItems = "center";
-        }
-    }
-
-    addToCartBtn.addEventListener("click", () => {
-        showCartData(pdtCount);
-        console.log(pdtCount);
-    });
-})();
 
 // Function to update the main product image
 (function changeMainProduct() {
