@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     box-sizing: border-box;
+    overflow: hidden !important;
 }
 
 /* Remove default margin */
@@ -20,9 +21,16 @@ dl,
 dd {
     margin: 0;
 }
+/* 
+body{
+    overflow-x: hidden;
+} */
 
 main {
-    margin-top: 8vh;
+    display: grid;
+    grid-template: 1fr 1fr;
+    margin: 8vh !important;
+    /* overflow: hidden !important; */
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -41,7 +49,7 @@ html:focus-within {
 /* Set core body defaults */
 
 body {
-    margin: 16vh 0 0 0;
+    /* margin: 16vh 0 0 0; */
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -56,11 +64,11 @@ a:not([class]) {
 
 /* Make images easier to work with */
 
-img,
+/* img,
 picture {
     max-width: 100%;
     display: block;
-}
+} */
 
 /* Inherit fonts for inputs and buttons */
 
@@ -135,52 +143,10 @@ button {
 
 /* Container that contain the others so that they have some space on the left and right side of them */
 
-.container {
-    width: min(90%, 1140px);
+.descaription {
+    width: 100%;
     margin: auto;
     padding: 1.5rem 0.5rem;
-}
-
-.container,
-.nav-links,
-.menu,
-.logo-ctn,
-.cart-ctn {
-    display: flex;
-    gap: 1.75rem;
-    align-items: center;
-}
-
-/* Gray overlay to body when side navbar pops-up on the mobile size */
-
-.show-overlay {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    transition: all 500ms;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-/* Navigation Box styling for the mobile size. */
-
-.nav-links {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: 100%;
-    padding: 1.75rem;
-    background: var(--White);
-    gap: 0.75rem;
-    z-index: 200;
-    flex-direction: column;
-    align-items: flex-start;
-    transform: translateX(-100%);
-    transition: all 500ms ease-in-out;
 }
 
 /* Adding this class to navigation box, to come in the screen when navigation menu is clicked. */
@@ -279,155 +245,13 @@ button {
     }
 }
 
-/* ***************** Main **************** */
-
-main {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-/* ************ Product slideshow for mobile size *********** */
-
-/* Slideshow container */
-
-.slideshow-container__mobile {
-    position: relative;
-    margin: 0 auto;
-    z-index: 0;
-}
-
-/* Hide the images by default */
-
-.mySlides,
-.mySlides__desktop {
-    display: none;
-}
-
-.mySlides img,
-.mySlides__desktop img {
-    max-width: 100%;
-}
-
-/* Next & previous buttons */
-
-.prev,
-.modal__prev,
-.next,
-.modal__next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.3s ease;
-    border-radius: 50px;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--White);
-}
-
-/* Position the "previous button" to the right */
-
-.prev,
-.modal__prev {
-    left: 1rem;
-}
-
-/* Position the "next button" to the right */
-
-.next,
-.modal__next {
-    right: 1rem;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover,
-.modal__prev:hover,
-.next:hover,
-.modal__next:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-/* Fading animation */
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* ********** Product showcase section at desktop size */
-
-.main-pdt-ctn img {
-    object-fit: cover;
-    border-radius: 10px;
-    height: 60vh;
-    width: 60vh;
-}
-
-.pdt-images-ctn {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.pdt-images-ctn img {
-    opacity: 1;
-    height: 12vh;
-    width: 12vh;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: opacity 300ms;
-}
-
-.pdt-images-ctn .pdt-image-ctn {
-    border-radius: 10px;
-}
-
-/* Active product image */
-
-.pdt-images-ctn .active-img-ctn {
-    outline: 3px solid var(--Orange);
-}
-
-.pdt-images-ctn .active-img-ctn img {
-    opacity: 0.4;
-}
-
-.pdt-images-ctn img:hover {
-    opacity: 0.4;
-}
-
-.pdt-showcase-ctn__desktop {
-    display: none;
-    width: 100vh !important;
-}
-
 @media screen and (min-width: 800px) {
     main {
-        margin: 5rem auto;
         width: 90%;
         display: grid;
         gap: 5rem;
         align-items: center;
-        grid-template-columns: 0.75fr 1fr;
-        max-width: 1050px;
+        grid-template-columns: 1fr 0.75fr;
     }
 
     .pdt-showcase-ctn__desktop {
@@ -445,14 +269,12 @@ main {
 
 /* ********* Product Information section ******** */
 
-.pdt-content-ctn {
-    position: fixed;
+.description {
     bottom: 350px;
     right: 40px;
     padding: 0 1.75rem 1.75rem 1.75rem;
     font-family: inherit;
-    /* width: 90%;
-    margin: 2rem auto; */
+    width: 90%;
 }
 
 .company-name {
@@ -492,7 +314,7 @@ main {
         margin-bottom: 1.25rem;
     }
 
-    .pdt-content-ctn .pdt-title {
+    .description .pdt-title {
         font-size: 2.75rem;
         margin-bottom: 2rem;
     }
@@ -534,83 +356,4 @@ main {
     color: #fff;
     align-items: center;
     justify-content: center;
-}
-
-/* ************** Product showcase modal ************** */
-
-main {
-    position: relative;
-}
-
-.pdt-showcase-modal__desktop {
-    max-width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    padding: 2rem 2.1rem 0;
-    display: flex;
-    flex-direction: column;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-.show-pdt-slideshow-modal {
-    display: flex;
-}
-
-.pdt-showcase-model__close-btn-ctn {
-    width: 2em;
-    height: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-    align-self: flex-end;
-}
-
-.pdt-showcase-model__close-btn-ctn i {
-    transform: scale(1.2);
-}
-
-.main-pdt-slideshow__modal {
-    border-radius: 15px;
-    background-color: var(--White);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
-
-.pdt-img__modal {
-    border-radius: 15px;
-    object-fit: cover;
-    height: 60vh;
-    width: 100%;
-}
-
-.pdt-images-ctn__modal {
-    width: 100%;
-    margin: 1.5rem auto;
-}
-
-.pdt-images-ctn__modal .pdt-image-ctn {
-    background-color: var(--White);
-}
-
-.active-pdt-img-ctn__modal {}
-
-.active-pdt-img__modal {
-    outline: 3px solid var(--Orange);
-}
-
-/* **************** Footer *************** */
-
-footer {
-    margin: 3rem 0;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }

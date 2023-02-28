@@ -28,7 +28,8 @@ button {
 }
 
 .navbar {
-    z-index: 5;
+    position: fixed;
+    z-index: 50;
     top: 0;
     left: 0;
     display: flex;
@@ -63,7 +64,7 @@ button {
 }
 
 .navbar-burger {
-    z-index: 5;
+    z-index: 50;
     top: 0;
     right: 0;
     display: grid;
@@ -79,11 +80,11 @@ button {
 
 body.open .navbar-burger {
     background-image: url("../../adoption/css/img/close.svg");
-    z-index: 5;
+    z-index: 50;
 }
 
 .menu {
-    z-index: 2;
+    z-index: 20;
     top: 0;
     left: 0;
     display: flex;

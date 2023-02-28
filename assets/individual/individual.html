@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/individual.css" type="text/css">
     <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
 
     <link rel="stylesheet" href="https://kit.fontawesome.com/fc47bfe2a7.css" crossorigin="anonymous">
 </head>
@@ -33,135 +34,32 @@
 
     <!-- main -->
     <main>
-        <!-- Slideshow container -->
-        <div class="slideshow-container__mobile pdt-slideshow-ctn">
+        <div class="slider">
+            <input type="radio" id="trigger1" name="slider">
+            <label id="firstLabel" for="trigger1"><span class="sr-only">Slide 1 of 5. A photo of a mountain pass with a winding path
+                    along the river and a view of distant mountains hiding in the mist.</span></label>
+            <div class="slide bg1"></div>
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img
-                    src="../main/img/1.JPG"
-                    style="width:100%">
-            </div>
+            <input type="radio" id="trigger2" name="slider" checked autofocus>
+            <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo of a bird eating sunflower seeds from an
+                    open hand.</span></label>
+            <div class="slide bg2"></div>
 
-            <div class="mySlides fade">
-                <img src="../main/img/2.JPG"
-                    style="width:100%">
-            </div>
+            <input type="radio" id="trigger3" name="slider">
+            <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river with
+                    high voltage power lines on both banks.</span></label>
+            <div class="slide bg3"></div>
 
-            <div class="mySlides fade">
-                <img src="../main/img/3.JPG"
-                    style="width:100%">
-            </div>
+            <input type="radio" id="trigger4" name="slider">
+            <label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a lake surrounded by the forest with
+                    mountains in the background.</span></label>
+            <div class="slide bg4"></div>
 
-            <div class="mySlides fade">
-                <img src="../main/img/4.JPG"
-                    style="width:100%">
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev">
-                <i class="fa-solid fa-chevron-left">
-                    <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
-                </i>
-            </a>
-            <a class="next">
-                <i class="fa-solid fa-chevron-right">
-                    <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
-                </i>
-            </a>
+            <input type="radio" id="trigger5" name="slider">
+            <label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a forest.</span></label>
+            <div class="slide bg5"></div>
         </div>
-
-        <div class="pdt-showcase-ctn__desktop">
-            <div class="main-pdt-ctn">
-                <img class="main-pdt-img"
-                    src="../main/img/1.JPG"
-                    alt="product image">
-            </div>
-            <div class="pdt-images-ctn">
-                <div class="pdt-image-ctn">
-                    <img src="../main/img/2.JPG"
-                        alt="Product image" class="pdt-img" data-key="1">
-                </div>
-                <div class="pdt-image-ctn">
-                    <img src="../main/img/3.JPG"
-                        alt="Product image" class="pdt-img" data-key="2">
-                </div>
-                <div class="pdt-image-ctn">
-                    <img src="../main/img/4.JPG"
-                        alt="Product image" class="pdt-img" data-key="3">
-                </div>
-                <div class="pdt-image-ctn">
-                    <img src="../main/img/5.JPG"
-                        alt="Product image" class="pdt-img" data-key="4">
-                </div>
-            </div>
-        </div>
-
-        <div class="pdt-showcase-ctn__desktop pdt-showcase-modal__desktop">
-            <div class="pdt-showcase-model__close-btn-ctn">
-                <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-                        fill="#69707D" fill-rule="evenodd" />
-                </svg>
-            </div>
-            <div class="main-pdt-slideshow__modal pdt-slideshow-ctn">
-                <div class="mySlides__desktop fade">
-                    <img class="pdt-img__modal" data-item="1"
-                        src="../main/img/1.JPG">
-                </div>
-
-                <div class="mySlides__desktop fade">
-                    <img class="pdt-img__modal" data-item="2"
-                        src="../main/img/2.JPG"
-                        style="width:100%">
-                </div>
-
-                <div class="mySlides__desktop fade">
-                    <img class="pdt-img__modal" data-item="3"
-                        src="../main/img/3.JPG"
-                        style="width:100%">
-                </div>
-
-                <div class="mySlides__desktop fade">
-                    <img class="pdt-img__modal" data-item="4"
-                        src="../main/img/4.JPG"
-                        style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="modal__prev">
-                    <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
-                    </svg>
-                </a>
-                <a class="modal__next">
-                    <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-            <div class="pdt-images-ctn__modal pdt-images-ctn">
-                <div class="pdt-image-ctn pdt-image-ctn__modal">
-                    <img src="../main/img/1.JPG"
-                        alt="Product image" class="pdt-img-modal" data-key="1">
-                </div>
-                <div class="pdt-image-ctn pdt-image-ctn__modal">
-                    <img src="../main/img/2.JPG"
-                        alt="Product image" class="pdt-img-modal" data-key="2">
-                </div>
-                <div class="pdt-image-ctn pdt-image-ctn__modal">
-                    <img src="../main/img/3.JPG"
-                        alt="Product image" class="pdt-img-modal" data-key="3">
-                </div>
-                <div class="pdt-image-ctn pdt-image-ctn__modal">
-                    <img src="../main/img/4.JPG"
-                        alt="Product image" class="pdt-img-modal" data-key="4">
-                </div>
-            </div>
-        </div>
-
-        <section class="pdt-content-ctn">
+        <div class="description">
             <h1 class="pdt-title">Max</h1>
             <p class="pdt-desc">
                 Super amoroso, se lleva con todos los animales. Miren esos ojitos!😍.
@@ -179,7 +77,7 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     <script src="js/adoption.js"></script>
     <script src="https://kit.fontawesome.com/fc47bfe2a7.js" crossorigin="anonymous"></script>
