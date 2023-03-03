@@ -279,9 +279,10 @@ body.open .menu>a {
 }
 
 swiper-container {
-    width: 90%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     border-radius: 25px;
+    margin-bottom: 3rem;
 }
 
 swiper-slide {
