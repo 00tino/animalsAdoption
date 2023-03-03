@@ -23,10 +23,14 @@
 }
 
 :root {
-    --black: rgb(36, 36, 36);
     --background-dark: #2d3548;
     --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
+
+    --main-color: #8927E5;
+    --background-color: #FEF7FF;
+    --black: #201925;
+    --secundary-color: #A088B1;
 }
 
 @font-face {
@@ -53,7 +57,7 @@
 
 
 body {
-    background: #A7727D;
+    background: var(--background-color);
     overflow-x: hidden;
 }
 
@@ -66,12 +70,12 @@ button {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 /* header */
 .showcase {
-    background-color: rgb(184, 184, 184);
+    background-color: var(--background-color);
     position: relative;
     height: 100vh;
     width: 100%;
@@ -140,7 +144,7 @@ a {
 }
 
 #textHeader:hover {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--background-color);
     color: transparent;
     scale: 1.2;
 }
@@ -148,14 +152,14 @@ a {
 #downArrow {
     font-family: 'icons';
     cursor: pointer;
-    color: white;
+    color: var(--background-color);
     font-size: 2rem;
     margin-top: 3rem;
     transition: all .5s;
 }
 
 #downArrow:hover {
-    text-shadow: 0px 0px 20px #fff;
+    text-shadow: 0px 0px 20px var(--background-color);
 }
 
 /* navbar */
@@ -174,8 +178,8 @@ a {
     width: 100%;
     height: 8vh;
     padding: 0 0 0 20px;
-    background: #19191c;
-    color: #f9f9f9;
+    background: var(--black);
+    color: var(--background-color);
 }
 
 .navbar #adopcion {
@@ -185,7 +189,7 @@ a {
 }
 
 .navbar #adopcion:hover {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--background-color);
     color: transparent;
     scale: 1.1;
 }
@@ -242,7 +246,7 @@ body.open .menu {
 }
 
 .menu>a {
-    color: #f9f9f9;
+    color: var(--background-color);
     font-size: 32px;
     font-family: "Euclid Circular A";
     text-decoration: none;
@@ -268,12 +272,37 @@ body.open .menu>a {
     width: 100%;
     top: 0;
     z-index: 150;
-} 
+}
+
+#adoptameTitle {
+    color: var(--secundary-color);
+}
+
+swiper-container {
+    width: 90%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* information */
 .aboutUs {
-    /* background: lightcoral; */
-    color: #ddccb9;
+    color: var(--main-color);
     display: flex;
     justify-content: space-around;
     overflow-y: hidden;
@@ -281,7 +310,6 @@ body.open .menu>a {
 }
 
 .aboutUs h1 {
-    /* background: green; */
     min-width: 200px;
     width: 20%;
     margin-top: 35vh;
@@ -307,17 +335,16 @@ body.open .menu>a {
 }
 
 .aboutUs .allTech .techIndividual .techText p {
-    color: #F9F5E7;
+    color: var(--secundary-color);
     font-weight: lighter;
 }
 
 .space {
     height: 104.5vh;
-    background: blue;
 }
 
 .space div {
-    background: #333333;
+    background: var(--black);
     height: 12.5vh;
 }
 
@@ -345,7 +372,7 @@ body.open .menu>a {
 .screen {
     position: relative;
     overflow: hidden;
-    background: #3e3e3e;
+    background: var(--black);
     border-radius: 15px;
 }
 
@@ -426,7 +453,7 @@ body.open .menu>a {
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #A7727D;
+    color: var(--secundary-color);
     font-size: 26px;
 }
 
@@ -438,13 +465,13 @@ body.open .menu>a {
     bottom: -10px;
     width: 25px;
     height: 4px;
-    background: #EDDBC7;
+    background: var(--secundary-color);
 }
 
 .app-title .descriptionForm {
     font-size: 15px;
     margin: 1rem 2rem 0 0;
-    color: #EDDBC7;
+    color: var(--secundary-color);
 }
 
 .app-contact {
@@ -473,7 +500,7 @@ body.open .menu>a {
     background: none;
     border: none;
     border-bottom: 1px solid #666;
-    color: #F9F5E7;
+    color: var(--background-color);
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
@@ -481,24 +508,24 @@ body.open .menu>a {
 }
 
 .app-form-control::placeholder {
-    color: #666;
+    color: var(--secundary-color);
 }
 
 .app-form-control:focus {
-    border-bottom-color: #F9F5E7;
+    border-bottom-color: var(--background-color);
 }
 
 .app-form-button {
     background: none;
     border: none;
-    color: #A7727D;
+    color: var(--background-color);
     font-size: 14px;
     cursor: pointer;
     outline: none;
 }
 
 .app-form-button:hover {
-    color: #785259;
+    color: var(--secundary-color);
 }
 
 @media screen and (max-width: 520px) {
