@@ -26,6 +26,10 @@ $baby-blue: #A088B1;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(rgb(64, 0, 47), 0.5);
   
+  &:hover {
+    transform: scale(1.1);
+  }
+  
   &:focus {
     outline: 0;
   }
