@@ -23,10 +23,6 @@
 }
 
 :root {
-    --background-dark: #2d3548;
-    --text-light: rgba(255, 255, 255, 0.6);
-    --text-lighter: rgba(255, 255, 255, 0.9);
-
     --main-color: #8927E5;
     --background-color: #FEF7FF;
     --black: #201925;

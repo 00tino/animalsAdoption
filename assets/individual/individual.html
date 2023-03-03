@@ -9,9 +9,10 @@
 
     <link rel="stylesheet" href="css/individual.css" type="text/css">
     <link rel="stylesheet" href="css/navbar.css" type="text/css">
-    <link rel="stylesheet" href="css/slider.css" type="text/css">
 
     <link rel="stylesheet" href="https://kit.fontawesome.com/fc47bfe2a7.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -35,52 +36,42 @@
     <!-- main -->
     <main>
         <div class="slider">
-            <input type="radio" id="trigger1" name="slider">
-            <label id="firstLabel" for="trigger1"><span class="sr-only">Slide 1 of 5. A photo of a mountain pass with a winding path
-                    along the river and a view of distant mountains hiding in the mist.</span></label>
-            <div class="slide bg1"></div>
-
-            <input type="radio" id="trigger2" name="slider" checked autofocus>
-            <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo of a bird eating sunflower seeds from an
-                    open hand.</span></label>
-            <div class="slide bg2"></div>
-
-            <input type="radio" id="trigger3" name="slider">
-            <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river with
-                    high voltage power lines on both banks.</span></label>
-            <div class="slide bg3"></div>
-
-            <input type="radio" id="trigger4" name="slider">
-            <label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a lake surrounded by the forest with
-                    mountains in the background.</span></label>
-            <div class="slide bg4"></div>
-
-            <input type="radio" id="trigger5" name="slider">
-            <label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a forest.</span></label>
-            <div class="slide bg5"></div>
+            <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true">
+                <swiper-slide><img src="../main/img/1.JPG" alt="/"></swiper-slide>
+                <swiper-slide><img src="../main/img/2.JPG" alt="/"></swiper-slide>
+                <swiper-slide><img src="../main/img/3.JPG" alt="/"></swiper-slide>
+                <swiper-slide><img src="../main/img/4.JPG" alt="/"></swiper-slide>
+                <swiper-slide><img src="../main/img/5.JPG" alt="/"></swiper-slide>
+                <swiper-slide><img src="../main/img/flaca.png" alt="/"></swiper-slide>
+                <swiper-slide><img src="../main/img/rayo.jpeg" alt="/"></swiper-slide>
+            </swiper-container>
         </div>
-        <div class="description">
-            <h1 class="pdt-title">Max</h1>
-            <p class="pdt-desc">
-                Super amoroso, se lleva con todos los animales. Miren esos ojitos!😍.
-            </p>
-            <div class="cart-section">
-                <div class="addToCart-btn-ctn">
-                    <button id="addToCart-btn" type="button">
-                        <span class="addToCart-btn__cart-icon">
-                            <!-- <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-                                <i class="fa-regular fa-paw"></i>
-                            </svg> -->
-                            <i class="fa-solid fa-paw"></i>
-                        </span>
-                        <span>Consultar!</span>
-                    </button>
+        <div class="information">
+            <div class="description">
+                <h1 class="pdt-title">Max</h1>
+                <p class="pdt-desc">
+                    Super amoroso, se lleva con todos los animales. Miren esos ojitos!😍.
+                </p>
+                <div class="cart-section">
+                    <div class="addToCart-btn-ctn">
+                        <button id="addToCart-btn" type="button">
+                            <span class="addToCart-btn__cart-icon">
+                                <!-- <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <i class="fa-regular fa-paw"></i>
+                                </svg> -->
+                                <i class="fa-solid fa-paw"></i>
+                            </span>
+                            <span>Consultar!</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <script src="js/adoption.js"></script>
     <script src="https://kit.fontawesome.com/fc47bfe2a7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
 </body>
 
 </html>

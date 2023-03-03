@@ -3,357 +3,65 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /* scroll-behavior: smooth; */
-    box-sizing: border-box;
-    overflow: hidden !important;
-}
-
-/* Remove default margin */
-
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-/* 
-body{
-    overflow-x: hidden;
-} */
-
-main {
-    display: grid;
-    grid-template: 1fr 1fr;
-    margin: 8vh !important;
-    /* overflow: hidden !important; */
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-
-ul[role="list"],
-ol[role="list"] {
-    list-style: none;
-}
-
-/* Set core root defaults */
-
-html:focus-within {
     scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
+:root {
+    --main-color: #8927E5;
+    --background-color: #FEF7FF;
+    --black: #201925;
+    --secundary-color: #A088B1;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
 
 body {
-    /* margin: 16vh 0 0 0; */
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    background: #ddccb9;
-}
-
-/* A elements that don't have a class get default styles */
-
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-
-/* img,
-picture {
-    max-width: 100%;
-    display: block;
-} */
-
-/* Inherit fonts for inputs and buttons */
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* *********** Custom style ************** */
-
-:root {
-    --Orange: hsl(26, 100%, 55%);
-    --Pale-orange: hsl(25, 100%, 94%);
-    --Very-dark-blue: hsl(218, 12%, 13%);
-    --Dark-grayish-blue: hsl(219, 9%, 45%);
-    --Grayish-blue: hsl(220, 14%, 75%);
-    --Light-grayish-blue: hsl(223, 64%, 98%);
-    --White: hsl(0, 0%, 100%);
-    --Black: hsl(0, 0%, 0%);
-    /* (with 75% opacity for lightbox background) */
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* **************** NavBar *************** */
-
-
-
-@font-face {
-    font-family: "vanilla";
-    src: url("../../fonts/VanillaTwilight\ Script.eot");
-    src: url("../../fonts/Vanilla\ Twilight\ Script.eot?iefix") format("embedded-opentype"),
-        url("../../fonts/Vanilla\ Twilight\ Script.woff") format("woff"),
-        url("../../fonts/VanillaTwilight\ Script.ttf") format("truetype"),
-        url("../../fonts/Vanilla\ Twilight\ Script.svg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-button {
-    border: 0;
+    background: var(--background-color);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: var(--secundary-color);
+    margin: 0;
     padding: 0;
-    background: transparent;
-    cursor: pointer;
 }
 
-/* Container that contain the others so that they have some space on the left and right side of them */
+main {
+    margin-top: 8vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+}
 
-.descaription {
+.slider {
+    width: 45%;
+    margin: 8rem 0rem 2rem 2rem;
+    overflow: hidden;
+}
+
+swiper-container {
     width: 100%;
-    margin: auto;
-    padding: 1.5rem 0.5rem;
+    height: 80vh;
 }
 
-/* Adding this class to navigation box, to come in the screen when navigation menu is clicked. */
-
-.show-nav {
-    transform: translateX(0%);
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-links li:first-child {
-    margin-bottom: 2rem;
-}
-
-/* Navigation links */
-
-.nav-link {
-    font-weight: 600;
-    font-size: 1.2rem;
-    position: relative;
-}
-
-.nav-link::after {
-    content: "";
+swiper-slide img {
+    display: block;
     width: 100%;
-    height: 5px;
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    background: var(--Orange);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 300ms;
+    height: 100%;
+    object-fit: cover;
 }
-
-.nav-link:hover::after {
-    transform: scaleX(1);
-}
-
-@media screen and (min-width: 800px) {
-    .container {
-        padding-bottom: 2rem;
-        border-bottom: 1px solid var(--Grayish-blue);
-    }
-
-    /* Removing the menu functionality for the desktop size */
-    .menu {
-        display: none;
-    }
-
-    #nav-close-btn {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-left: 1.5rem;
-        color: var(--Dark-grayish-blue);
-        position: relative;
-        padding: 0;
-        z-index: 500;
-        width: auto;
-        flex-direction: row;
-        transform: translateX(0%);
-    }
-
-    .nav-link {
-        font-weight: 300;
-        font-size: 1rem;
-        transition: color 300ms;
-    }
-
-    .nav-link:hover {
-        color: var(--Very-dark-blue);
-    }
-
-    .nav-link::after {
-        bottom: calc((-7px - 2.5rem));
-    }
-
-    .cart-ctn {
-        margin-right: 1.5rem;
-    }
-
-    .cart-modal {
-        left: 75%;
-        transform: translateX(50%);
-    }
-
-    .show-card-modal {
-        transform: translateX(-50%);
-    }
-
-    .user-pf-ctn {
-        width: 3rem;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    main {
-        width: 90%;
-        display: grid;
-        gap: 5rem;
-        align-items: center;
-        grid-template-columns: 1fr 0.75fr;
-    }
-
-    .pdt-showcase-ctn__desktop {
-        display: block;
-    }
-
-    .slideshow-container__mobile {
-        display: none;
-    }
-
-    .pdt-showcase-ctn .main-product-img {
-        border-radius: 10px;
-    }
-}
-
-/* ********* Product Information section ******** */
 
 .description {
-    bottom: 350px;
-    right: 40px;
-    padding: 0 1.75rem 1.75rem 1.75rem;
-    font-family: inherit;
-    width: 90%;
-}
-
-.company-name {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--Orange);
-    letter-spacing: 1px;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-}
-
-.pdt-title {
-    /* color: var(--Orange) !important; */
-    color: #A7727D !important;
-    text-shadow: rgb(255, 255, 255) 0px 3px 8px, rgb(255, 255, 255) 0px 3px 8px, rgb(255, 255, 255) 0px 3px 8px;
-    font-weight: 700;
-    font-size: 2.5em;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: var(--Very-dark-blue);
-}
-
-.pdt-desc {
-    line-height: 1.6;
-    color: var(--Dark-grayish-blue);
-}
-
-@media screen and (min-width: 975px) {
-    .cart-section {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr 1.5fr;
-        align-items: center;
-    }
-
-    .company-name {
-        margin-bottom: 1.25rem;
-    }
-
-    .description .pdt-title {
-        font-size: 2.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .cart-section .pdt-quantity-ctn {
-        margin: 0;
-        font-size: 1.2rem;
-    }
-}
-
-.addToCart-btn-ctn {
-    width: 100%;
-    margin-top: 40px;
-}
-
-#addToCart-btn {
-    width: 100%;
-    border: none;
-    padding: 1rem 0;
-    color: var(--White);
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 10px;
-    opacity: 1;
-    background: var(--Orange);
-    transition: opacity 300ms;
-    box-shadow: 0px 20px 30px var(--Pale-orange);
-}
-
-#addToCart-btn:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-#addToCart-btn,
-.cart-icon {
-    display: flex;
-    gap: 1rem;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
+    width: 45%;
 }
