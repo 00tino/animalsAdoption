@@ -34,6 +34,7 @@ main {
     margin-right: auto;
 }
 
+/* animal (slidel and description) */
 .animal {
     display: flex;
     align-items: center;
@@ -41,6 +42,7 @@ main {
     margin-top: 8vh;
 }
 
+/* slider */
 .slider {
     width: 45%;
     margin-top: 4rem;
@@ -69,6 +71,7 @@ swiper-slide img {
     object-fit: cover;
 }
 
+/* description */
 .description {
     display: flex;
     justify-content: center;
@@ -90,4 +93,52 @@ swiper-slide img {
     margin: 2rem 0;
     text-align: center;
     color: var(--black);
+}
+
+/* information of the animal */
+.animalInformation {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5rem;
+}
+
+.individualInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 12rem;
+    height: 12rem;
+    margin: 2rem;
+    padding: 1rem;
+    color: var(--background-color);
+    background: var(--secundary-color);
+    border: 3px solid var(--secundary-color);
+    box-shadow: 1px 1px 53px -78px rgba(160, 136, 177, 1);
+    -webkit-box-shadow: 1px 1px 53px -78px rgba(160, 136, 177, 1);
+    -moz-box-shadow: 1px 1px 53px -78px rgba(160, 136, 177, 1);
+    border-radius: 1rem;
+    transition: all 0.3s;
+}
+
+.individualInfo:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 65px -48px rgba(137, 39, 229, 1);
+    -webkit-box-shadow: 1px 1px 65px -48px rgba(137, 39, 229, 1);
+    -moz-box-shadow: 1px 1px 65px -48px rgba(137, 39, 229, 1);
+}
+
+.individualInfo h6 {
+    font-size: 1.3rem;
+}
+
+.individualInfo i {
+    font-size: 2rem;
+}
+
+.individualInfo p {
+    font-size: 1rem;
 }
