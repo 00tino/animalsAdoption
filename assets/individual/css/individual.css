@@ -82,6 +82,7 @@ swiper-slide img {
 
 .pdt-title {
     font-size: 3rem;
+    color: var(--background-color);
 }
 
 .pdt-desc {
