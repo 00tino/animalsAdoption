@@ -30,6 +30,7 @@ body {
 
 main {
     width: 90%;
+    padding-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -49,13 +50,13 @@ main {
     overflow: hidden;
 }
 
-swiper-container {
+.slider swiper-container {
     width: 100%;
     height: 80vh;
     border-radius: 1.5rem;
 }
 
-swiper-slide {
+.slider swiper-slide {
     text-align: center;
     font-size: 18px;
     background: var(--background-color);
@@ -64,7 +65,7 @@ swiper-slide {
     align-items: center;
 }
 
-swiper-slide img {
+.slider swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -85,7 +86,7 @@ swiper-slide img {
 
 .pdt-title {
     font-size: 3rem;
-    color: var(--background-color);
+    color: var(--secundary-color);
 }
 
 .pdt-desc {
@@ -141,4 +142,42 @@ swiper-slide img {
 
 .individualInfo p {
     font-size: 1rem;
+}
+
+/* animal sugested */
+
+/* title */
+.sugestedAnimals .pdt-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* slider */
+.sugestedAnimals swiper-container {
+    width: 100%;
+    height: 30rem;
+    border-radius: 1.5rem
+}
+
+.sugestedAnimals swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sugestedAnimals swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
 }

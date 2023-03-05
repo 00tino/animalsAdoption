@@ -57,3 +57,10 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 const toggleMenu = () => {
     document.body.classList.toggle("open");
 };
+
+// segested animal
+const swiperEl = document.querySelector('swiper-container');
+const swiper = swiperEl.swiper;
+
+var appendNumber = 4;
+var prependNumber = 1;
