@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/individual.css" type="text/css">
     <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/button.css" type="text/css">
 
     <link rel="stylesheet" href="https://kit.fontawesome.com/fc47bfe2a7.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -35,38 +36,35 @@
 
     <!-- main -->
     <main>
-        <div class="slider">
-            <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true">
-                <swiper-slide><img src="../main/img/1.JPG" alt="/"></swiper-slide>
-                <swiper-slide><img src="../main/img/2.JPG" alt="/"></swiper-slide>
-                <swiper-slide><img src="../main/img/3.JPG" alt="/"></swiper-slide>
-                <swiper-slide><img src="../main/img/4.JPG" alt="/"></swiper-slide>
-                <swiper-slide><img src="../main/img/5.JPG" alt="/"></swiper-slide>
-                <swiper-slide><img src="../main/img/flaca.png" alt="/"></swiper-slide>
-                <swiper-slide><img src="../main/img/rayo.jpeg" alt="/"></swiper-slide>
-            </swiper-container>
-        </div>
-        <div class="information">
+        <div class="animal">
+            <div class="slider">
+                <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true">
+                    <swiper-slide><img src="../main/img/1.JPG" alt="/"></swiper-slide>
+                    <swiper-slide><img src="../main/img/2.JPG" alt="/"></swiper-slide>
+                    <swiper-slide><img src="../main/img/3.JPG" alt="/"></swiper-slide>
+                    <swiper-slide><img src="../main/img/4.JPG" alt="/"></swiper-slide>
+                    <swiper-slide><img src="../main/img/5.JPG" alt="/"></swiper-slide>
+                    <swiper-slide><img src="../main/img/flaca.png" alt="/"></swiper-slide>
+                    <swiper-slide><img src="../main/img/rayo.jpeg" alt="/"></swiper-slide>
+                </swiper-container>
+            </div>
+
             <div class="description">
                 <h1 class="pdt-title">Max</h1>
                 <p class="pdt-desc">
                     Super amoroso, se lleva con todos los animales. Miren esos ojitos!😍.
                 </p>
                 <div class="cart-section">
-                    <div class="addToCart-btn-ctn">
-                        <button id="addToCart-btn" type="button">
-                            <span class="addToCart-btn__cart-icon">
-                                <!-- <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-                                    <i class="fa-regular fa-paw"></i>
-                                </svg> -->
-                                <i class="fa-solid fa-paw"></i>
-                            </span>
-                            <span>Consultar!</span>
-                        </button>
-                    </div>
+                    <button class="bubbly-button" type="button">
+                        <span class="addToCart-btn__cart-icon">
+                            <i class="fa-solid fa-paw"></i>
+                        </span>
+                        <span>Consultar!</span>
+                    </button>
                 </div>
             </div>
         </div>
+
     </main>
     <script src="js/adoption.js"></script>
     <script src="https://kit.fontawesome.com/fc47bfe2a7.js" crossorigin="anonymous"></script>
