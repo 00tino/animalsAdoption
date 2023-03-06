@@ -161,12 +161,18 @@ main {
 }
 
 .sugestedAnimals swiper-slide {
+    cursor: pointer;
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s;
+}
+
+.sugestedAnimals swiper-slide:hover {
+    transform: scale(1.07);
 }
 
 .sugestedAnimals swiper-slide img {

@@ -54,7 +54,7 @@
 
 body {
     background: var(--background-color);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 button {
@@ -270,13 +270,17 @@ body.open .menu>a {
     z-index: 150;
 }
 
+#heroCard {
+    height: 92vh;
+}
+
 #adoptameTitle {
     color: var(--secundary-color);
 }
 
 swiper-container {
     width: 80%;
-    height: 80%;
+    height: 70%;
     border-radius: 25px;
     margin-bottom: 3rem;
 }
@@ -300,21 +304,47 @@ swiper-slide img {
 /* information */
 .aboutUs {
     color: var(--main-color);
+    position: relative;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    overflow-y: hidden;
-    height: 92vh;
 }
 
-.aboutUs h1 {
-    min-width: 200px;
-    width: 20%;
-    margin-top: 35vh;
-    font-size: 50px;
-    font-weight: 900;
+.aboutUs .allAboutUs {
+    background: var(--secundary-color);
+    color: var(--background-color);
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62vh;
 }
 
-.aboutUs .allTech {
+.aboutUs .allAboutUs .techIndividual {
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+}
+
+.aboutUs .allAboutUs .techIndividual h1 {
+    font-size: 6rem;
+}
+
+.aboutUs .allAboutUs .techIndividual h4 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase
+}
+
+.aboutUs .allAboutUs .techIndividual p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.aboutUs .allAboutUs .techIndividual b {
+    font-size: 1.5rem;
+}
+
+/* .aboutUs .allTech {
     width: 50%;
     height: 100%;
     margin-top: 17vh;
@@ -343,7 +373,7 @@ swiper-slide img {
 .space div {
     background: var(--black);
     height: 12.5vh;
-}
+} */
 
 /* contact us */
 

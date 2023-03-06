@@ -61,6 +61,3 @@ const toggleMenu = () => {
 // segested animal
 const swiperEl = document.querySelector('swiper-container');
 const swiper = swiperEl.swiper;
-
-var appendNumber = 4;
-var prependNumber = 1;

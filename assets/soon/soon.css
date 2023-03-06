@@ -1,15 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -31,12 +27,10 @@ body #background {
   width: auto;
   height: auto;
   z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   background: url(polina.jpg) no-repeat;
   background-size: cover;
   overflow: hidden;
-  -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
@@ -73,9 +67,6 @@ body .main #content .title {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
-p {
-  padding-bottom: 3rem;
-}
 html .main #content .title span,
 body .main #content .title span {
   font-size: 4rem;
@@ -83,23 +74,9 @@ body .main #content .title span {
 }
 html .main #content .title:hover,
 body .main #content .title:hover {
-  -webkit-animation: MISSION-HOVER 1.5s infinite;
-  -moz-animation: MISSION-HOVER 1.5s infinite;
-  -o-animation: MISSION-HOVER 1.5s infinite;
   animation: MISSION-HOVER 1.5s infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-}
-@-webkit-keyframes MISSION-HOVER {
-  0%, 100% {
-    font-size: 4rem;
-    color: white;
-  }
-  50% {
-    color: #bffcff;
-    letter-spacing: 5px;
-    text-shadow: 0px 0px 30px rgb(191, 252, 255);
-  }
 }
 html .main #content p,
 body .main #content p {
@@ -123,9 +100,6 @@ html .main #content p:last-child > a,
 body .main #content p:last-child > a {
   text-decoration: none;
   color: inherit;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 html .main #content p:last-child > a:hover,
@@ -170,6 +144,4 @@ body .main #content section p.timedescription {
   text-align: center;
   position: relative;
   top: 0px;
-}
-
-/*# sourceMappingURL=soon.css.map */
+}/*# sourceMappingURL=soon.css.map */
