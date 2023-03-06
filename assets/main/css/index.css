@@ -301,6 +301,10 @@ swiper-slide img {
     object-fit: cover;
 }
 
+.heroButton {
+    height: 15vh;
+}
+
 /* information */
 .aboutUs {
     color: var(--main-color);
