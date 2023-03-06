@@ -316,7 +316,7 @@ swiper-slide img {
 .aboutUs .allAboutUs {
     background: var(--secundary-color);
     color: var(--background-color);
-    min-width: 100%;
+    min-width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,37 +347,6 @@ swiper-slide img {
 .aboutUs .allAboutUs .techIndividual b {
     font-size: 1.5rem;
 }
-
-/* .aboutUs .allTech {
-    width: 50%;
-    height: 100%;
-    margin-top: 17vh;
-}
-
-.aboutUs .allTech .techIndividual {
-    display: flex;
-    height: 150px;
-}
-
-.aboutUs .allTech .techIndividual img {
-    width: 200px;
-    height: 60px;
-    margin: 0 40px 0 0;
-}
-
-.aboutUs .allTech .techIndividual .techText p {
-    color: var(--secundary-color);
-    font-weight: lighter;
-}
-
-.space {
-    height: 104.5vh;
-}
-
-.space div {
-    background: var(--black);
-    height: 12.5vh;
-} */
 
 /* contact us */
 
