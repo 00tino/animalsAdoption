@@ -168,6 +168,7 @@ a {
     z-index: 110;
     top: 0;
     left: 0;
+    /* position: sticky; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -282,7 +283,8 @@ swiper-container {
     width: 80%;
     height: 70%;
     border-radius: 25px;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    transition: all .3s;
 }
 
 swiper-slide {
@@ -292,6 +294,11 @@ swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s;
+}
+
+swiper-slide:hover {
+    transform: scale(1.05);
 }
 
 swiper-slide img {
@@ -316,11 +323,15 @@ swiper-slide img {
 .aboutUs .allAboutUs {
     background: var(--secundary-color);
     color: var(--background-color);
-    min-width: 50%;
+    min-width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 62vh;
+    height: 50vh;
+}
+
+.aboutUs .allAboutUs:first-child {
+    min-width: 50%;
 }
 
 .aboutUs .allAboutUs .techIndividual {
@@ -329,12 +340,16 @@ swiper-slide img {
     text-align: center;
 }
 
+.aboutUs .allAboutUs .techIndividual:first-child {
+    max-width: 600px;
+}
+
 .aboutUs .allAboutUs .techIndividual h1 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .aboutUs .allAboutUs .techIndividual h4 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
     text-transform: uppercase
 }
