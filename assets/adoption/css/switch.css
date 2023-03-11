@@ -8,22 +8,27 @@
 .check-box-group {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    /* margin: 30px; */
 }
 
 .custom-checkbox {
     cursor: pointer;
     display: flex;
     align-items: center;
-}
-
-.custom-checkbox:first-child {
-    margin: 0 100px 0 0;
+    margin: 20px 30px 0 30px;
 }
 
 .custom-checkbox .label {
     font-size: 1.6em;
 }
+
+/* .check-box-group select {
+    height: 26px;
+    color: #FEF7FF;
+    border: 2px solid #222;
+    border-radius: 5px;
+    background: #222;
+} */
 
 .custom-checkbox .checkmark {
     width: 20px;
